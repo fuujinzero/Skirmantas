@@ -18,7 +18,14 @@ public class Main
 
     
     
-    Collection<User> users = pacemakerAPI.getUsers1();
+    Collection<User> users = pacemakerAPI.getUsers();
+    System.out.println(users);
+    
+    User homer = pacemakerAPI.getUserByEmail("homer@simpson.com");
+    System.out.println(homer);
+
+    pacemakerAPI.deleteUser(homer.id);
+    users = pacemakerAPI.getUsers();
     System.out.println(users);
   }
 }

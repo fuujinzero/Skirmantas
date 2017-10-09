@@ -8,16 +8,16 @@ public class User {
 	  public String lastName;
 	  public String email;
 	  public String password;
-	  
-	  public User()
-	  {
-	  }
+	  static Long   counter = 0l;
+	  public Long   id;
+	
 	  public User(String firstName, String lastName, String email, String password)
 	  {
 	    this.firstName = firstName;
 	    this.lastName = lastName;
 	    this.email = email;
 	    this.password = password;
+	    this.id        = counter++;
 	  }
 	  @Override	  
  public String toString()	{
